@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "eu.bergfam.app.lampemagasinet",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#2a3d67",
@@ -13,7 +13,7 @@
   },
   "description": {
     "en": "Control Lampemagasinet lights with this IR remote.",
-    "no": "Kontroller lys fra Lampemgasinet med denne IR-fjernkontrollen."
+    "no": "Kontroller lys fra Lampemagasinet med denne IR-fjernkontrollen."
   },
   "category": [
     "lights"
@@ -37,6 +37,7 @@
       "note": "Based on the Logitech Z906 app by Jordy Thien."
     }
   },
+  "source": "https://github.com/NorSB/eu.bergfam.app.lampemagasinet",
   "flow": {
     "actions": [
       {
