@@ -1,0 +1,9 @@
+{
+  "type": "boolean",
+  "title": { "en": "Kelvin 4k" },
+  "getable": false,
+  "setable": true,
+  "uiComponent": "button",
+  "uiQuickAction": true,
+  "icon": "/assets/capabilities/kelvin_4k.svg"
+}

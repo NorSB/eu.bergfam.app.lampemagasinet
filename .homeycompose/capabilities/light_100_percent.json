@@ -1,0 +1,9 @@
+{
+  "type": "boolean",
+  "title": { "en": "Light 100 %" },
+  "getable": false,
+  "setable": true,
+  "uiComponent": "button",
+  "uiQuickAction": true,
+  "icon": "/assets/capabilities/light_100_percent.svg"
+}

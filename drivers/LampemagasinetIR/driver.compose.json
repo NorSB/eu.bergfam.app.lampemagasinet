@@ -1,0 +1,55 @@
+{
+  "name": {
+    "en": "Lampemagasinet remote"
+  },
+  "class": "remote",
+  "capabilities": [
+	"light_up",
+	"light_down",
+	"kelvin_up",
+	"kelvin_down",
+	"power_on_off",
+	"light_preset_night",
+    "kelvin_3k",
+	"kelvin_4k",
+	"kelvin_6k",
+	"light_20_percent",
+	"light_50_percent",
+	"light_100_percent"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "infrared"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "infrared": {
+    "satelliteMode": true
+  },
+  "pair": [
+    {
+      "id": "rf_ir_remote_learn",
+      "navigation": {
+        "next": "rf_ir_remote_add"
+      },
+      "options": {
+        "title": {
+          "en": "Connect your Lampemagasinet light",
+          "no": "Koble til din Lampemagasinet-lys"
+        },
+        "instruction": {
+          "en": "Press continue to connect your device.",
+          "no": "Trykk på neste for å koble til enheten din."
+        }
+      }
+    },
+    {
+      "id": "rf_ir_remote_add"
+    }
+  ]
+}

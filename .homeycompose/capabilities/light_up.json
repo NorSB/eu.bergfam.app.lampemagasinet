@@ -1,0 +1,9 @@
+{
+  "type": "boolean",
+  "title": { "en": "Light up" },
+  "getable": false,
+  "setable": true,
+  "uiComponent": "button",
+  "uiQuickAction": true,
+  "icon": "/assets/capabilities/light_up.svg"
+}

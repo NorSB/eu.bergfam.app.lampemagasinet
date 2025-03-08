@@ -1,0 +1,284 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "eu.bergfam.app.lampemagasinet",
+  "version": "1.0.2",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#2a3d67",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Lampemagasinet IR"
+  },
+  "description": {
+    "en": "Control Lampemagasinet lights with this IR remote.",
+    "no": "Kontroller lys fra Lampemgasinet med denne IR-fjernkontrollen."
+  },
+  "category": [
+    "lights"
+  ],
+  "permissions": [
+    "homey:wireless:ir"
+  ],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Stian Berg"
+  },
+  "support": "https://community.homey.app/t/app-pro-lampemagasinet-ir/131969",
+  "credits": {
+    "originalDeveloper": {
+      "name": "Jordy Thien",
+      "github": "https://github.com/JordyThien/nu.thien.logitech",
+      "note": "Based on the Logitech Z906 app by Jordy Thien."
+    }
+  },
+  "flow": {
+    "actions": [
+      {
+        "id": "LampemagasinetIR:send_cmd",
+        "title": {
+          "en": "Send Command",
+          "no": "Send Kommando"
+        },
+        "titleFormatted": {
+          "en": "Send command [[cmd]]",
+          "no": "Send kommando [[cmd]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=LampemagasinetIR"
+          },
+          {
+            "title": {
+              "en": "Button",
+              "no": "Knapp"
+            },
+            "name": "cmd",
+            "type": "autocomplete"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Lampemagasinet remote"
+      },
+      "class": "remote",
+      "capabilities": [
+        "light_up",
+        "light_down",
+        "kelvin_up",
+        "kelvin_down",
+        "power_on_off",
+        "light_preset_night",
+        "kelvin_3k",
+        "kelvin_4k",
+        "kelvin_6k",
+        "light_20_percent",
+        "light_50_percent",
+        "light_100_percent"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "infrared"
+      ],
+      "images": {
+        "small": "/drivers/LampemagasinetIR/assets/images/small.png",
+        "large": "/drivers/LampemagasinetIR/assets/images/large.png",
+        "xlarge": "/drivers/LampemagasinetIR/assets/images/xlarge.png"
+      },
+      "infrared": {
+        "satelliteMode": true
+      },
+      "pair": [
+        {
+          "id": "rf_ir_remote_learn",
+          "navigation": {
+            "next": "rf_ir_remote_add"
+          },
+          "options": {
+            "title": {
+              "en": "Connect your Lampemagasinet light",
+              "no": "Koble til din Lampemagasinet-lys"
+            },
+            "instruction": {
+              "en": "Press continue to connect your device.",
+              "no": "Trykk på neste for å koble til enheten din."
+            }
+          }
+        },
+        {
+          "id": "rf_ir_remote_add"
+        }
+      ],
+      "id": "LampemagasinetIR"
+    }
+  ],
+  "capabilities": {
+    "kelvin_3k": {
+      "type": "boolean",
+      "title": {
+        "en": "Kelvin 3k"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "/assets/capabilities/kelvin_3k.svg"
+    },
+    "kelvin_4k": {
+      "type": "boolean",
+      "title": {
+        "en": "Kelvin 4k"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "/assets/capabilities/kelvin_4k.svg"
+    },
+    "kelvin_6k": {
+      "type": "boolean",
+      "title": {
+        "en": "Kelvin 6k"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "/assets/capabilities/kelvin_6k.svg"
+    },
+    "kelvin_down": {
+      "type": "boolean",
+      "title": {
+        "en": "Kelvin down"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "/assets/capabilities/kelvin_down.svg"
+    },
+    "kelvin_up": {
+      "type": "boolean",
+      "title": {
+        "en": "Kelvin up"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "/assets/capabilities/kelvin_up.svg"
+    },
+    "light_100_percent": {
+      "type": "boolean",
+      "title": {
+        "en": "Light 100 %"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "/assets/capabilities/light_100_percent.svg"
+    },
+    "light_20_percent": {
+      "type": "boolean",
+      "title": {
+        "en": "Light 20 %"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "/assets/capabilities/light_20_percent.svg"
+    },
+    "light_50_percent": {
+      "type": "boolean",
+      "title": {
+        "en": "Light 50 %"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "/assets/capabilities/light_50_percent.svg"
+    },
+    "light_down": {
+      "type": "boolean",
+      "title": {
+        "en": "Light down"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "/assets/capabilities/light_down.svg"
+    },
+    "light_preset_night": {
+      "type": "boolean",
+      "title": {
+        "en": "Preset night"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "/assets/capabilities/light_preset_night.svg"
+    },
+    "light_up": {
+      "type": "boolean",
+      "title": {
+        "en": "Light up"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "/assets/capabilities/light_up.svg"
+    },
+    "power_on_off": {
+      "type": "boolean",
+      "title": {
+        "en": "Power"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true,
+      "icon": "/assets/capabilities/power_on_off.svg"
+    }
+  },
+  "signals": {
+    "ir": {
+      "lampemagasinet_prontohex": {
+        "type": "prontohex",
+        "repetitions": 1,
+        "cmds": {
+          "KELVIN_3K": "0000 006D 0024 0000 014F 00A8 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0015 0015 0040 0015 0594 014F 0040 0015 0E00",
+          "KELVIN_4K": "0000 006D 0024 0000 0150 00A6 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0015 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0040 0015 0040 0015 0015 0015 0040 0015 0040 0015 0040 0015 0015 0015 0040 0015 0593 0150 0040 0015 0E00",
+          "KELVIN_6K": "0000 006D 0024 0000 014F 00A8 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0015 0015 0015 0015 0015 0015 0041 0015 0015 0015 0015 0015 0041 0015 0015 0015 0041 0015 0041 0015 0041 0015 0015 0015 0041 0015 0041 0015 0015 0015 0041 0015 0594 014F 0041 0015 09BA",
+          "KELVIN_DOWN": "0000 006D 0024 0000 0150 00A8 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0015 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0015 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0594 0150 0041 0015 09BA",
+          "KELVIN_UP": "0000 006D 0024 0000 0151 00A7 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0015 0015 0040 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0040 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0593 0151 0040 0015 09BA",
+          "LIGHT_20_PERCENT": "0000 006D 0024 0000 0150 00A7 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0594 0150 0040 0015 0E00",
+          "LIGHT_50_PERCENT": "0000 006D 0024 0000 014F 00A8 0015 003F 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 003F 0015 003F 0015 003F 0015 003F 0015 003F 0015 003F 0015 003F 0015 003F 0015 003F 0015 003F 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 003F 0015 003F 0015 003F 0015 003F 0015 003F 0015 0595 014F 003F 0015 09BA",
+          "LIGHT_100_PERCENT": "0000 006D 0024 0000 0150 00A6 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0015 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0015 0015 0041 0015 0041 0015 0041 0015 0041 0015 0593 0150 0041 0015 0E00",
+          "LIGHT_DOWN": "0000 006D 0024 0000 014F 00A7 0015 0041 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0015 0015 0015 0015 0041 0015 0015 000A 0020 0015 0015 0015 0015 0015 0015 0015 0041 0015 0041 0015 0015 0015 0041 0015 0041 0015 0041 0015 0041 0015 0041 0015 0594 014F 0041 0015 0E01",
+          "LIGHT_UP": "0000 006D 0024 0000 0150 00A8 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0594 0150 0040 0015 0DFF",
+          "LIGHT_PRESET_NIGHT": "0000 006D 0024 0000 0150 00A7 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0015 0015 0040 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0593 0150 0040 0015 09BA",
+          "POWER_ON_OFF": "0000 006D 0024 0000 0150 00A8 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0596 0150 0040 0015 09BA"
+        }
+      }
+    }
+  }
+}

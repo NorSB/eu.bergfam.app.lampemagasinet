@@ -1,0 +1,25 @@
+{
+  "actions": [
+    {
+      "id": "{{driverId}}:send_cmd",
+      "title": {
+        "en": "Send Command",
+        "no": "Send Kommando"
+      },
+      "titleFormatted": {
+        "en": "Send command [[cmd]]",
+        "no": "Send kommando [[cmd]]"
+      },
+      "args": [
+        {
+          "title": {
+            "en": "Button",
+            "no": "Knapp"
+          },
+          "name": "cmd",
+          "type": "autocomplete"
+        }
+      ]
+    }
+  ]
+}

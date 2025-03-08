@@ -1,0 +1,39 @@
+{
+  "id": "eu.bergfam.app.lampemagasinet",
+  "version": "1.0.2",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#2a3d67",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Lampemagasinet IR"
+  },
+  "description": {
+    "en": "Control Lampemagasinet lights with this IR remote.",
+    "no": "Kontroller lys fra Lampemgasinet med denne IR-fjernkontrollen."
+  },
+  "category": [
+    "lights"
+  ],
+  "permissions": [
+    "homey:wireless:ir"
+  ],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Stian Berg"
+  },
+  "support": "https://community.homey.app/t/app-pro-lampemagasinet-ir/131969",
+  "credits": {
+    "originalDeveloper": {
+      "name": "Jordy Thien",
+      "github": "https://github.com/JordyThien/nu.thien.logitech",
+      "note": "Based on the Logitech Z906 app by Jordy Thien."
+    }
+  }
+}

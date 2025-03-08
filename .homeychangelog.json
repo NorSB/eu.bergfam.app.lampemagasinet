@@ -1,0 +1,11 @@
+{
+  "1.0.0": {
+    "en": "First version of the Lampemgasinet IR remote App for Homey"
+  },
+  "1.0.1": {
+    "en": "Fixed icon sizes, plus some minor tweaks"
+  },
+  "1.0.2": {
+    "en": "Fixed some more problems with icons and images"
+  }
+}
